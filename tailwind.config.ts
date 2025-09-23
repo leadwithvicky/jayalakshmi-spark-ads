@@ -51,14 +51,25 @@ export default {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-cta': 'var(--gradient-cta)',
         'gradient-overlay': 'var(--gradient-overlay)',
+        'gradient-card': 'var(--gradient-card)',
       },
       boxShadow: {
         'card': 'var(--shadow-card)',
         'button': 'var(--shadow-button)',
         'hero': 'var(--shadow-hero)',
+        'accent': 'var(--shadow-accent)',
+        'glow': '0 0 30px hsl(var(--accent) / 0.4)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      transitionDuration: {
+        '400': '400ms',
+        '600': '600ms',
+      },
+      scale: {
+        '102': '1.02',
+        '105': '1.05',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -91,8 +102,20 @@ export default {
           "100%": { opacity: "1", transform: "translateX(0)" }
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--secondary) / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(var(--secondary) / 0.6), 0 0 60px hsl(var(--accent) / 0.3)" }
+          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--accent) / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(var(--accent) / 0.6), 0 0 60px hsl(var(--secondary) / 0.3)" }
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" }
+        },
+        "shimmer": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" }
+        },
+        "bounce-gentle": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" }
         }
       },
       animation: {
@@ -103,6 +126,9 @@ export default {
         "scale-in": "scale-in 0.4s ease-out",
         "slide-in-right": "slide-in-right 0.5s ease-out",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "float": "float 3s ease-in-out infinite",
+        "shimmer": "shimmer 2s ease-in-out infinite",
+        "bounce-gentle": "bounce-gentle 2s ease-in-out infinite",
       },
     },
   },

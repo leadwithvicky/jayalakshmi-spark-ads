@@ -3,56 +3,59 @@
 @tailwind utilities;
 
 /* Jayalakshmi Digital Ads Design System
-Professional digital marketing agency brand colors and design tokens
+Cool Slate Blue, Soft Teal, and Coral color scheme
 */
 
 @layer base {
   :root {
-    /* Brand Colors - Professional digital marketing theme */
-    --background: 0 0% 100%;
-    --foreground: 220 26% 14%;
+    /* Brand Colors - Elegant and Modern */
+    --background: 60 100% 97%;
+    --foreground: 180 25% 15%;
     
-    /* Deep Blue Primary - Trust & Professionalism */
-    --primary: 225 100% 32%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 225 100% 28%;
+    /* Cool Slate Blue Primary - Sophistication & Trust */
+    --primary: 180 25% 25%;
+    --primary-foreground: 60 100% 97%;
+    --primary-hover: 180 25% 20%;
     
-    /* Vibrant Orange Secondary - Energy & Action */
-    --secondary: 24 95% 53%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-hover: 24 95% 48%;
+    /* Soft Teal Secondary - Calm & Professional */
+    --secondary: 174 72% 56%;
+    --secondary-foreground: 180 25% 15%;
+    --secondary-hover: 174 72% 50%;
     
-    /* Electric Green Accent - Innovation & Growth */
-    --accent: 159 84% 39%;
-    --accent-foreground: 0 0% 100%;
-    --accent-hover: 159 84% 34%;
+    /* Coral Accent - Energy & Warmth */
+    --accent: 5 100% 69%;
+    --accent-foreground: 60 100% 97%;
+    --accent-hover: 5 100% 63%;
     
     /* Neutral System */
-    --muted: 210 40% 98%;
-    --muted-foreground: 215 16% 47%;
-    --card: 0 0% 100%;
-    --card-foreground: 220 26% 14%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 62%;
+    --card: 60 100% 97%;
+    --card-foreground: 180 25% 15%;
     
     /* Interactive Elements */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 225 100% 32%;
+    --border: 0 0% 88%;
+    --input: 0 0% 90%;
+    --ring: 180 25% 25%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 60 100% 97%;
     
-    /* Gradients for Impact */
-    --gradient-hero: linear-gradient(135deg, hsl(225 100% 32%), hsl(24 95% 53%));
-    --gradient-cta: linear-gradient(90deg, hsl(24 95% 53%), hsl(159 84% 39%));
-    --gradient-overlay: linear-gradient(180deg, transparent, hsl(225 100% 32% / 0.8));
+    /* Elegant Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(180 25% 25%), hsl(174 72% 56%));
+    --gradient-cta: linear-gradient(90deg, hsl(174 72% 56%), hsl(5 100% 69%));
+    --gradient-overlay: linear-gradient(180deg, transparent, hsl(180 25% 25% / 0.7));
+    --gradient-card: linear-gradient(145deg, hsl(60 100% 97%), hsl(0 0% 95%));
     
-    /* Shadows for Depth */
-    --shadow-card: 0 4px 6px -1px hsl(225 100% 32% / 0.1), 0 2px 4px -1px hsl(225 100% 32% / 0.06);
-    --shadow-button: 0 8px 25px -8px hsl(24 95% 53% / 0.5);
-    --shadow-hero: 0 25px 50px -12px hsl(225 100% 32% / 0.25);
+    /* Refined Shadows */
+    --shadow-card: 0 4px 12px hsl(180 25% 25% / 0.08), 0 2px 4px hsl(180 25% 25% / 0.04);
+    --shadow-button: 0 6px 20px hsl(174 72% 56% / 0.3);
+    --shadow-hero: 0 20px 40px hsl(180 25% 25% / 0.15);
+    --shadow-accent: 0 8px 25px hsl(5 100% 69% / 0.25);
     
-    /* Animation Variables */
+    /* Smooth Animation Variables */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-gentle: all 0.2s ease-out;
     
     --radius: 0.75rem;
 
@@ -74,41 +77,36 @@ Professional digital marketing agency brand colors and design tokens
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 180 25% 8%;
+    --foreground: 60 100% 97%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 180 25% 10%;
+    --card-foreground: 60 100% 97%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --primary: 174 72% 56%;
+    --primary-foreground: 180 25% 8%;
+    --primary-hover: 174 72% 50%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 180 25% 25%;
+    --secondary-foreground: 60 100% 97%;
+    --secondary-hover: 180 25% 20%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --accent: 5 100% 69%;
+    --accent-foreground: 180 25% 8%;
+    --accent-hover: 5 100% 63%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 180 25% 12%;
+    --muted-foreground: 0 0% 62%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --border: 180 25% 18%;
+    --input: 180 25% 15%;
+    --ring: 174 72% 56%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 60 100% 97%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --gradient-hero: linear-gradient(135deg, hsl(180 25% 10%), hsl(174 72% 56%));
+    --gradient-cta: linear-gradient(90deg, hsl(174 72% 56%), hsl(5 100% 69%));
+    --gradient-overlay: linear-gradient(180deg, transparent, hsl(180 25% 8% / 0.8));
   }
 }
 
@@ -118,6 +116,52 @@ Professional digital marketing agency brand colors and design tokens
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Enhanced animations */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-card;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-cta bg-clip-text text-transparent;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px hsl(var(--accent) / 0.3); }
+  100% { box-shadow: 0 0 30px hsl(var(--accent) / 0.6), 0 0 40px hsl(var(--secondary) / 0.3); }
+}
+
+/* Responsive utilities */
+@layer utilities {
+  .container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+  
+  .text-responsive {
+    @apply text-sm sm:text-base lg:text-lg;
   }
 }
