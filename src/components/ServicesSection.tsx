@@ -44,7 +44,7 @@ const ServicesSection = () => {
 
   return (
     <section className="section-padding bg-background" id="services">
-      <div className="container mx-auto">
+      <div className="container mx-auto ">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <div className="flex items-center justify-center mb-4">

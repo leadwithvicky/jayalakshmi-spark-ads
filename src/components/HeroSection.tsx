@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { ArrowRight, Play, BarChart3, MapPin, Users } from "lucide-react";
 import heroImage from "@/assets/hero-led-truck.jpg";
 
@@ -32,7 +33,7 @@ const HeroSection = () => {
             </h1>
           </div>
           
-          <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div className="animate-fade-in" style={{ animationDelay: '0.9s' }}>
             <p className="text-lg sm:text-xl md:text-2xl mb-8 text-white/90 leading-relaxed max-w-4xl mx-auto">
               City-wide campaigns, LED truck advertising, and custom packages that deliver 
               measurable results across your target coverage areas
@@ -41,15 +42,19 @@ const HeroSection = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <Button variant="hero" size="xl" className="group min-w-[200px]">
-              Start Your Campaign
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link to="/contact" className="no-underline">
+              <Button variant="hero" size="xl" className="group min-w-[200px]">
+                Start Your Campaign
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
             
-            <Button variant="outline" size="xl" className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-primary min-w-[200px] backdrop-blur-sm">
-              <Play className="w-5 h-5" />
-              View Our Work
-            </Button>
+            <Link to="/portfolio" className="no-underline">
+              <Button variant="outline" size="xl" className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-primary min-w-[200px] backdrop-blur-sm">
+                <Play className="w-5 h-5" />
+                View Our Work
+              </Button>
+            </Link>
           </div>
           
           {/* Key Stats */}
@@ -77,9 +82,9 @@ const HeroSection = () => {
       
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center cursor-pointer hover:border-secondary transition-colors">
+        {/* <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center cursor-pointer hover:border-secondary transition-colors">
           <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

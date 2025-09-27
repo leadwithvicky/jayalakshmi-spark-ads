@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -36,7 +37,7 @@ const Header = () => {
         {/* Top contact bar */}
         <div className={cn(
           "hidden md:flex justify-end items-center py-2 text-sm transition-all duration-300",
-          isScrolled ? "text-muted-foreground border-b border-border/50" : "text-white/80 border-b border-white/20"
+          isScrolled ? "text-muted-foreground border-b border-border/50" : "text-black/80 border-b border-white/20"
         )}>
           <div className="flex items-center gap-6">
             <a href="tel:+919876543210" className={cn(
@@ -62,7 +63,7 @@ const Header = () => {
           <div className="flex-shrink-0">
             <a href="/" className={cn(
               "text-xl sm:text-2xl font-bold transition-all duration-300 hover-lift",
-              isScrolled ? "text-primary" : "text-white"
+              isScrolled ? "text-primary" : "text-black/90 hover:text-secondary"
             )}>
               Jayalakshmi <span className={cn(
                 "transition-colors duration-300",
@@ -81,7 +82,7 @@ const Header = () => {
                   "font-medium transition-all duration-300 relative group hover-lift",
                   isScrolled 
                     ? "text-foreground hover:text-primary" 
-                    : "text-white/90 hover:text-secondary"
+                    : "text-black/90 hover:text-black/100"
                 )}
               >
                 {item.name}
@@ -95,13 +96,15 @@ const Header = () => {
 
           {/* CTA Button & Mobile Menu */}
           <div className="flex items-center gap-4">
-            <Button 
-              variant={isScrolled ? "cta" : "accent"} 
-              size="default" 
-              className="hidden sm:inline-flex animate-bounce-gentle"
-            >
-              Get Free Quote
-            </Button>
+            <Link to="/contact" className="no-underline">
+              <Button 
+                variant={isScrolled ? "cta" : "accent"} 
+                size="default" 
+                className="hidden sm:inline-flex animate-bounce-gentle"
+              >
+                Get Free Quote
+              </Button>
+            </Link>
             
             {/* Mobile menu button */}
             <button
